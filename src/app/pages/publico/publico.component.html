@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <td valign="middle" class="ticket-actual">
+            <span id="lblTicket1" class="ticket-actual-numero">Turno {{ turnoActual == 0? '...' : turnoActual }} </span>
+            <br>
+            <span id="lblEscritorio1" class="ticket-actual-escritorio">Escritorio {{ escritorioActual == 0? '...' : escritorioActual }}</span>
+        </td>
+        <td>
+            <table>
+                <tr *ngFor="let ticket of lista.slice(0, maxHistorialTurnos); let i = index">
+                    <td>
+                        <span [attr.id]="'lblTicket' + i" class="ticket-secundario">Turno {{ ticket.turno }}</span>
+                        <br>
+                        <span [attr.id]="'lblEscritorio' + i">Escritorio {{ ticket.escritorio }}</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

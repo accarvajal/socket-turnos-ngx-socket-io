@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <td>
+            <span id="lblNuevoTurno">
+                {{ ticket? 'Asignado Turno: ' + ticket.turno : 'Asignando Turno ... ' }}
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button (click)="solicitarNuevoTurno()" class="btn btn-secondary btn-lg">
+                Generar nuevo turno
+            </button>
+        </td>
+    </tr>
+</table>

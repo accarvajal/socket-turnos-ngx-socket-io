@@ -1,0 +1,11 @@
+<h1>Escritorio {{ escritorio > 0? escritorio : '' }}</h1>
+<h4>{{ ticket? 'Atendiendo al turno ' : 'Sin turno asignado ' }}<small>{{ ticket? ticket.turno : '...' }}</small></h4>
+<hr>
+
+<button (click)="atenderSiguienteTicket()" class="btn btn-primary btn-lg">
+    Atender siguiente turno
+</button>
+
+<button (click)="terminarSesion()" class="btn btn-warning btn-lg btn-terminar-sesion">
+    Terminar sesión
+</button>
